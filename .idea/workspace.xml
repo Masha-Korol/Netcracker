@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4fe84756-70e6-4177-9990-9b2b9c7337f2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1jEJ3ERhspZajGPFHxQah33FiOo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/org/assertj" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="repo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="repo" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="repo" />
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\IdeaProjects\java-courses-spring\netcracker\src\main\java\model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.RepositoryTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="netcracker" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="netcracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repo" />
+      <option name="MAIN_CLASS_NAME" value="repo.RepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RepositoryTest" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4fe84756-70e6-4177-9990-9b2b9c7337f2" name="Default Changelist" comment="" />
+      <created>1603363116706</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603363116706</updated>
+      <workItem from="1603363119848" duration="10561000" />
+      <workItem from="1603378041477" duration="2674000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="233" y="2" key="#File_and_Code_Templates" timestamp="1603366918273">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="2" key="#File_and_Code_Templates/0.0.1280.680@0.0.1280.680" timestamp="1603366918273" />
+    <state x="233" y="2" key="#Inspections" timestamp="1603380303255">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="2" key="#Inspections/0.0.1280.680@0.0.1280.680" timestamp="1603380303255" />
+    <state x="233" y="2" key="#Project_Structure" timestamp="1603363133636">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="2" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1603363133636" />
+    <state x="446" y="60" key="#com.intellij.ide.util.MemberChooser" timestamp="1603372946881">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="60" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1603372946881" />
+    <state x="443" y="210" width="394" height="265" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1603378709350">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="443" y="210" width="394" height="265" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1603378709350" />
+    <state x="271" y="0" key="#netcracker_[test]" timestamp="1603372418639">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="271" y="0" key="#netcracker_[test]/0.0.1280.680@0.0.1280.680" timestamp="1603372418639" />
+    <state x="348" y="85" key="FileChooserDialogImpl" timestamp="1603372223823">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="348" y="85" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603372223823" />
+    <state width="1237" height="200" key="GridCell.Tab.0.bottom" timestamp="1603380699186">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="200" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603380699186" />
+    <state width="1237" height="200" key="GridCell.Tab.0.center" timestamp="1603380699186">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="200" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603380699186" />
+    <state width="1237" height="200" key="GridCell.Tab.0.left" timestamp="1603380699186">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="200" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603380699186" />
+    <state width="1237" height="200" key="GridCell.Tab.0.right" timestamp="1603380699186">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="200" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603380699186" />
+    <state width="1237" height="85" key="GridCell.Tab.1.bottom" timestamp="1603377963130">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="85" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603377963130" />
+    <state width="1237" height="85" key="GridCell.Tab.1.center" timestamp="1603377963130">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="85" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1603377963130" />
+    <state width="1237" height="85" key="GridCell.Tab.1.left" timestamp="1603377963130">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="85" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1603377963130" />
+    <state width="1237" height="85" key="GridCell.Tab.1.right" timestamp="1603377963130">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="85" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1603377963130" />
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1603372260887">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.680@0.0.1280.680" timestamp="1603372260887" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1603379529452">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603379529452" />
+    <state x="412" y="61" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1603365815381">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="412" y="61" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.680@0.0.1280.680" timestamp="1603365815381" />
+    <state x="297" y="151" width="672" height="677" key="run.anything.popup" timestamp="1603372840047">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1603372840047" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603379524207">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1603379524207" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="user" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
