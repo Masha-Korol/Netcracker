@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"model","l":"CanalPackage"},{"p":"model","l":"InternetContract"},{"p":"<Unnamed>","l":"Main"},{"p":"model","l":"PhoneContract"},{"p":"repo","l":"Repository"},{"p":"repo","l":"RepositoryTest"},{"p":"model","l":"Sex"},{"p":"model","l":"TVContract"},{"p":"model","l":"User"}]

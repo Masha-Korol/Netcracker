@@ -13,7 +13,7 @@ public class Repository {
     TVContract[] tvContracts = new TVContract[DEFAULT_CAPACITY];
 
     /**
-     *
+     * returns array of all internet contracts
      * @return InternetContract[]
      */
     public InternetContract[] getAllInternetContracts(){
@@ -21,7 +21,7 @@ public class Repository {
     }
 
     /**
-     *
+     * returns array of all tv contracts
      * @return TVContract[]
      */
     public TVContract[] getAllTVContracts(){
@@ -29,7 +29,7 @@ public class Repository {
     }
 
     /**
-     *
+     * returns array of all phone contracts
      * @return PhoneContract[]
      */
     public PhoneContract[] getAllPhoneContracts(){
@@ -37,7 +37,7 @@ public class Repository {
     }
 
     /**
-     *
+     * returns internet contract by id (first found)
      * @param id
      * @return InternetContract
      */
@@ -55,7 +55,7 @@ public class Repository {
     }
 
     /**
-     *
+     * returns phone contract by id (first found)
      * @param id
      * @return PhoneContract
      */
@@ -73,7 +73,7 @@ public class Repository {
     }
 
     /**
-     *
+     * returns tv contract by id (first found)
      * @param id
      * @return TVContract
      */
@@ -91,7 +91,7 @@ public class Repository {
     }
 
     /**
-     *
+     * adds new internet contract
      * @param internetContract
      */
     public void addInternetContract(InternetContract internetContract){
@@ -110,7 +110,7 @@ public class Repository {
     }
 
     /**
-     *
+     * adds new phone contract
      * @param phoneContract
      */
     public void  addPhoneContract(PhoneContract phoneContract){
@@ -128,7 +128,7 @@ public class Repository {
     }
 
     /**
-     *
+     * adds new tv contract
      * @param tvContract
      */
     public void addTVContract(TVContract tvContract){
@@ -146,9 +146,9 @@ public class Repository {
     }
 
     /**
-     *
+     * deletes internet contract by id
      * @param id
-     * @return boolean
+     * @return boolean - deleted or not found
      */
     public boolean deleteInternetContract(int id){
         for (int i = 0; i < internetContractCount && internetContracts[i] != null; i++){
@@ -161,9 +161,9 @@ public class Repository {
     }
 
     /**
-     *
+     * deletes phone contract by id
      * @param id
-     * @return boolean
+     * @return boolean - deleted or not found
      */
     public boolean deletePhoneContract(int id){
         for (int i = 0; i < phoneContractCount && phoneContracts[i] != null; i++){
@@ -176,9 +176,9 @@ public class Repository {
     }
 
     /**
-     *
+     * deletes tv contract by id
      * @param id
-     * @return boolean
+     * @return boolean - deleted or not found
      */
     public boolean deleteTVContract(int id){
         for (int i = 0; i < tvContractCount && tvContracts[i] != null; i++){
@@ -191,10 +191,10 @@ public class Repository {
     }
 
     /**
-     *
-     * @param id
-     * @param internetContract
-     * @return boolean
+     * replaces contract, found by id, with new one
+     * @param id id of contract to replace
+     * @param internetContract contract with which replace
+     * @return boolean - replaced or not found
      */
     public boolean replaceInternetContract(int id, InternetContract internetContract){
         for (int i =0;i < internetContractCount && internetContracts[i] != null; i++){
@@ -207,10 +207,10 @@ public class Repository {
     }
 
     /**
-     *
-     * @param id
-     * @param phoneContract
-     * @return boolean
+     * replaces contract, found by id, with new one
+     * @param id id of contract to replace
+     * @param phoneContract contract with which replace
+     * @return boolean - replaced or not found
      */
     public boolean replacePhoneContract(int id, PhoneContract phoneContract){
         for (int i =0;i < phoneContractCount && phoneContracts[i] != null; i++){
@@ -223,10 +223,10 @@ public class Repository {
     }
 
     /**
-     *
-      * @param id
-     * @param tvContract
-     * @return boolean
+     * replaces contract, found by id, with new one
+     * @param id id of contract to replace
+     * @param tvContract contract with which replace
+     * @return boolean - replaced or not found
      */
     public boolean replaceTVContract(int id, TVContract tvContract){
         for (int i =0;i < tvContractCount && tvContracts[i] != null; i++){

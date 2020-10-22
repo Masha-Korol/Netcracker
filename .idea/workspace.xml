@@ -49,7 +49,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -111,6 +111,7 @@
       <updated>1603363116706</updated>
       <workItem from="1603363119848" duration="10561000" />
       <workItem from="1603378041477" duration="5355000" />
+      <workItem from="1603396505845" duration="1590000" />
     </task>
     <servers />
   </component>
@@ -142,26 +143,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="271" y="0" key="#netcracker_[test]/0.0.1280.680@0.0.1280.680" timestamp="1603372418639" />
-    <state x="348" y="85" key="FileChooserDialogImpl" timestamp="1603372223823">
+    <state x="404" y="98" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1603398071128">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="348" y="85" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603372223823" />
-    <state width="1237" height="110" key="GridCell.Tab.0.bottom" timestamp="1603395218389">
+    <state x="404" y="98" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1603398071128" />
+    <state x="348" y="85" key="FileChooserDialogImpl" timestamp="1603397161583">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="110" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603395218389" />
-    <state width="1237" height="110" key="GridCell.Tab.0.center" timestamp="1603395218389">
+    <state x="348" y="85" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603397161583" />
+    <state width="1237" height="110" key="GridCell.Tab.0.bottom" timestamp="1603398104373">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="110" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603395218389" />
-    <state width="1237" height="110" key="GridCell.Tab.0.left" timestamp="1603395218389">
+    <state width="1237" height="110" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603398104373" />
+    <state width="1237" height="110" key="GridCell.Tab.0.center" timestamp="1603398104373">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="110" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603395218389" />
-    <state width="1237" height="110" key="GridCell.Tab.0.right" timestamp="1603395218389">
+    <state width="1237" height="110" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603398104373" />
+    <state width="1237" height="110" key="GridCell.Tab.0.left" timestamp="1603398104373">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="110" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603395218389" />
+    <state width="1237" height="110" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603398104373" />
+    <state width="1237" height="110" key="GridCell.Tab.0.right" timestamp="1603398104373">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="110" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603398104373" />
     <state width="1237" height="85" key="GridCell.Tab.1.bottom" timestamp="1603377963130">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -182,10 +187,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.680@0.0.1280.680" timestamp="1603381741969" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1603379529452">
+    <state x="121" y="0" key="SettingsEditor" timestamp="1603396544774">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603379529452" />
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603396544774" />
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1603396505013">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1603396505013" />
     <state x="412" y="61" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1603365815381">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -194,10 +203,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="151" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1603393851720" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603379524207">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603396537069">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1603379524207" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1603396537069" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

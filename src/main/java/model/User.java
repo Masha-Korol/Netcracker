@@ -13,6 +13,11 @@ public class User {
     private long passportSeries;
     private int age;
 
+    /**
+     * checks user data
+     * @param birth
+     * @return boolean - validated or not
+     */
     public boolean validateUser(Calendar birth){
         if (birth.compareTo(Calendar.getInstance()) > 0){
             return false;

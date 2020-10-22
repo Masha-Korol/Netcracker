@@ -13,8 +13,8 @@ public class PhoneContract {
     private int sms;
 
     /**
-     *
-     * @return boolean
+     * checks contract data
+     * @return boolean - validated or not
      */
     public boolean validateContract(){
         if (start.compareTo(finish) > 0 || start.compareTo(Calendar.getInstance()) > 0){
