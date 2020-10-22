@@ -1,18 +1,28 @@
 package model;
 
-import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class TVContract {
     private int id;
-    private SimpleDateFormat start;
-    private SimpleDateFormat finish;
+    private Calendar start;
+    private Calendar finish;
     private User user;
-
     private CanalPackage canalPackage;
 
+    /**
+     *
+     * @return boolean
+     */
+    public boolean validateContract(){
+        if (start.compareTo(finish) > 0 || start.compareTo(Calendar.getInstance()) > 0){
+            return false;
+        }
+        return true;
+    }
+    
     public TVContract(int id,
-                      SimpleDateFormat start,
-                      SimpleDateFormat finish,
+                      Calendar start,
+                      Calendar finish,
                       User user,
                       CanalPackage canalPackage) {
         this.id = id;
@@ -42,19 +52,19 @@ public class TVContract {
         this.id = id;
     }
 
-    public SimpleDateFormat getStart() {
+    public Calendar getStart() {
         return start;
     }
 
-    public void setStart(SimpleDateFormat start) {
+    public void setStart(Calendar start) {
         this.start = start;
     }
 
-    public SimpleDateFormat getFinish() {
+    public Calendar getFinish() {
         return finish;
     }
 
-    public void setFinish(SimpleDateFormat finish) {
+    public void setFinish(Calendar finish) {
         this.finish = finish;
     }
 

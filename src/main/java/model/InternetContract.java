@@ -1,18 +1,28 @@
 package model;
 
-import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class InternetContract {
     private int id;
-    private SimpleDateFormat start;
-    private SimpleDateFormat finish;
+    private Calendar start;
+    private Calendar finish;
     private User user;
-
     private int maxInternetSpeedMb;
 
+    /**
+     *
+     * @return boolean
+     */
+    public boolean validateContract(){
+        if (start.compareTo(finish) > 0 || start.compareTo(Calendar.getInstance()) > 0){
+            return false;
+        }
+        return true;
+    }
+    
     public InternetContract(int id,
-                            SimpleDateFormat start,
-                            SimpleDateFormat finish,
+                            Calendar start,
+                            Calendar finish,
                             User user,
                             int maxInternetSpeedMb) {
         this.id = id;
@@ -21,7 +31,7 @@ public class InternetContract {
         this.user = user;
         this.maxInternetSpeedMb=maxInternetSpeedMb;
     }
-
+    
     public InternetContract(int id) {
         this.id = id;
     }
@@ -42,19 +52,19 @@ public class InternetContract {
         this.id = id;
     }
 
-    public SimpleDateFormat getStart() {
+    public Calendar getStart() {
         return start;
     }
 
-    public void setStart(SimpleDateFormat start) {
+    public void setStart(Calendar start) {
         this.start = start;
     }
 
-    public SimpleDateFormat getFinish() {
+    public Calendar getFinish() {
         return finish;
     }
 
-    public void setFinish(SimpleDateFormat finish) {
+    public void setFinish(Calendar finish) {
         this.finish = finish;
     }
 
