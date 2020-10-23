@@ -1,24 +1,14 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
-public class InternetContract {
+public class InternetContract extends Contract {
     private int id;
     private Calendar start;
     private Calendar finish;
     private User user;
     private int maxInternetSpeedMb;
-
-    /**
-     * checks contract data
-     * @return boolean - validated or not
-     */
-    public boolean validateContract(){
-        if (start.compareTo(finish) > 0 || start.compareTo(Calendar.getInstance()) > 0){
-            return false;
-        }
-        return true;
-    }
     
     public InternetContract(int id,
                             Calendar start,

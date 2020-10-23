@@ -3,7 +3,7 @@ package model;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class PhoneContract {
+public class PhoneContract extends Contract {
     private int id;
     private Calendar start;
     private Calendar finish;
@@ -11,17 +11,6 @@ public class PhoneContract {
 
     private int mbInternet;
     private int sms;
-
-    /**
-     * checks contract data
-     * @return boolean - validated or not
-     */
-    public boolean validateContract(){
-        if (start.compareTo(finish) > 0 || start.compareTo(Calendar.getInstance()) > 0){
-            return false;
-        }
-        return true;
-    }
 
     public PhoneContract(int id,
                          Calendar start,

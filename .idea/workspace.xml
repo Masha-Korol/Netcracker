@@ -28,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -112,6 +112,8 @@
       <workItem from="1603363119848" duration="10561000" />
       <workItem from="1603378041477" duration="5355000" />
       <workItem from="1603396505845" duration="1590000" />
+      <workItem from="1603456013048" duration="546000" />
+      <workItem from="1603480078918" duration="5602000" />
     </task>
     <servers />
   </component>
@@ -131,10 +133,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="2" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1603363133636" />
-    <state x="446" y="60" key="#com.intellij.ide.util.MemberChooser" timestamp="1603381203797">
+    <state x="446" y="60" key="#com.intellij.ide.util.MemberChooser" timestamp="1603480485885">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="60" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1603381203797" />
+    <state x="446" y="60" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1603480485885" />
     <state x="443" y="210" width="394" height="265" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1603378709350">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -143,46 +145,50 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="271" y="0" key="#netcracker_[test]/0.0.1280.680@0.0.1280.680" timestamp="1603372418639" />
-    <state x="404" y="98" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1603398071128">
+    <state x="404" y="98" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1603485627805">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="404" y="98" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1603398071128" />
+    <state x="404" y="98" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1603485627805" />
+    <state width="456" height="466" key="DebuggerActiveHint" timestamp="1603485071675">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="456" height="466" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1603485071675" />
     <state x="348" y="85" key="FileChooserDialogImpl" timestamp="1603397161583">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="348" y="85" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603397161583" />
-    <state width="1237" height="110" key="GridCell.Tab.0.bottom" timestamp="1603398104373">
+    <state width="1237" height="54" key="GridCell.Tab.0.bottom" timestamp="1603485628190">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="110" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603398104373" />
-    <state width="1237" height="110" key="GridCell.Tab.0.center" timestamp="1603398104373">
+    <state width="1237" height="54" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603485628190" />
+    <state width="1237" height="54" key="GridCell.Tab.0.center" timestamp="1603485628190">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="110" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603398104373" />
-    <state width="1237" height="110" key="GridCell.Tab.0.left" timestamp="1603398104373">
+    <state width="1237" height="54" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603485628190" />
+    <state width="1237" height="54" key="GridCell.Tab.0.left" timestamp="1603485628189">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="110" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603398104373" />
-    <state width="1237" height="110" key="GridCell.Tab.0.right" timestamp="1603398104373">
+    <state width="1237" height="54" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603485628189" />
+    <state width="1237" height="54" key="GridCell.Tab.0.right" timestamp="1603485628190">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="110" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603398104373" />
-    <state width="1237" height="85" key="GridCell.Tab.1.bottom" timestamp="1603377963130">
+    <state width="1237" height="54" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603485628190" />
+    <state width="1237" height="262" key="GridCell.Tab.1.bottom" timestamp="1603485240058">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="85" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603377963130" />
-    <state width="1237" height="85" key="GridCell.Tab.1.center" timestamp="1603377963130">
+    <state width="1237" height="262" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603485240058" />
+    <state width="1237" height="262" key="GridCell.Tab.1.center" timestamp="1603485240058">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="85" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1603377963130" />
-    <state width="1237" height="85" key="GridCell.Tab.1.left" timestamp="1603377963130">
+    <state width="1237" height="262" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1603485240058" />
+    <state width="1237" height="262" key="GridCell.Tab.1.left" timestamp="1603485240058">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="85" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1603377963130" />
-    <state width="1237" height="85" key="GridCell.Tab.1.right" timestamp="1603377963130">
+    <state width="1237" height="262" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1603485240058" />
+    <state width="1237" height="262" key="GridCell.Tab.1.right" timestamp="1603485240058">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="85" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1603377963130" />
+    <state width="1237" height="262" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1603485240058" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1603381741969">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -191,10 +197,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603396544774" />
-    <state x="349" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1603396505013">
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1603480078749">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1603396505013" />
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1603480078749" />
     <state x="412" y="61" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1603365815381">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -212,7 +218,13 @@
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="user" />
+        <watch expression="repository.contracts[2]" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/netcracker$RepositoryTest.ic" NAME="RepositoryTest Coverage Results" MODIFIED="1603484333684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>.*</FILTER>
+    </SUITE>
   </component>
 </project>

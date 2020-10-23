@@ -2,23 +2,12 @@ package model;
 
 import java.util.Calendar;
 
-public class TVContract {
+public class TVContract extends Contract {
     private int id;
     private Calendar start;
     private Calendar finish;
     private User user;
     private CanalPackage canalPackage;
-
-    /**
-     * checks contract data
-     * @return boolean - validated or not
-     */
-    public boolean validateContract(){
-        if (start.compareTo(finish) > 0 || start.compareTo(Calendar.getInstance()) > 0){
-            return false;
-        }
-        return true;
-    }
     
     public TVContract(int id,
                       Calendar start,

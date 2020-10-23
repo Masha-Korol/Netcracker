@@ -5,35 +5,63 @@ import model.*;
 public class Repository {
     final int DEFAULT_CAPACITY = 16;
 
-    int internetContractCount;
-    int phoneContractCount;
-    int tvContractCount;
-    InternetContract[] internetContracts = new InternetContract[DEFAULT_CAPACITY];
-    PhoneContract[] phoneContracts = new PhoneContract[DEFAULT_CAPACITY];
-    TVContract[] tvContracts = new TVContract[DEFAULT_CAPACITY];
+    private int countInternetContracts;
+    private int countPhoneContracts;
+    private int countTVContracts;
+    private int count;
+    Contract[] contracts = new Contract[DEFAULT_CAPACITY];
+
+    /**
+     * gets all contracts
+     * @return
+     */
+    public Contract[] getAllContracts(){
+        return contracts;
+    }
 
     /**
      * returns array of all internet contracts
      * @return InternetContract[]
      */
-    public InternetContract[] getAllInternetContracts(){
-        return internetContracts;
+    public Contract[] getAllInternetContracts(){
+        Contract[] contracts = new Contract[countInternetContracts];
+        int count = 0;
+        for (int i = 0; i < count; i++){
+            if (contracts[i] instanceof InternetContract){
+                contracts[count++] = contracts[i];
+            }
+        }
+        return contracts;
     }
 
     /**
      * returns array of all tv contracts
      * @return TVContract[]
      */
-    public TVContract[] getAllTVContracts(){
-        return tvContracts;
+    public Contract[] getAllTVContracts(){
+        Contract[] contracts = new Contract[countTVContracts];
+        int count = 0;
+        for (int i = 0; i < count; i++){
+            if (contracts[i] instanceof TVContract){
+                contracts[count++] = contracts[i];
+            }
+        }
+        return contracts;
     }
 
     /**
      * returns array of all phone contracts
      * @return PhoneContract[]
      */
-    public PhoneContract[] getAllPhoneContracts(){
-        return phoneContracts;
+    public Contract[] getAllPhoneContracts(){
+        Contract[] contracts = new Contract[countPhoneContracts];
+        int count = 0;
+        for (int i = 0; i < count; i++){
+            if (contracts[i] instanceof PhoneContract){
+                contracts[count++] = contracts[i];
+            }
+        }
+        return contracts;
     }
 
     /**
@@ -41,15 +69,12 @@ public class Repository {
      * @param id
      * @return InternetContract
      */
-    public InternetContract getInternetContract(int id){
-        try {
-            for(InternetContract internetContract : internetContracts){
-                if (internetContract.getId() == id){
-                    return internetContract;
-                }
+    public Contract getInternetContract(int id){
+        for (int i = 0; i < count; i++){
+            if ((contracts[i] instanceof InternetContract) &&
+                    ((InternetContract)contracts[i]).getId() == id){
+                return contracts[i];
             }
-        } catch (NullPointerException e) {
-            return null;
         }
         return null;
     }
@@ -59,15 +84,12 @@ public class Repository {
      * @param id
      * @return PhoneContract
      */
-    public PhoneContract getPhoneContract(int id){
-        try {
-            for (PhoneContract phoneContract : phoneContracts){
-                if(phoneContract.getId()==id){
-                    return phoneContract;
-                }
+    public Contract getPhoneContract(int id){
+        for (int i = 0; i < count; i++){
+            if ((contracts[i] instanceof PhoneContract) &&
+                    ((PhoneContract)contracts[i]).getId() == id){
+                return contracts[i];
             }
-        } catch (NullPointerException e) {
-            return null;
         }
         return null;
     }
@@ -77,72 +99,84 @@ public class Repository {
      * @param id
      * @return TVContract
      */
-    public TVContract getTVContract(int id){
-        try{
-            for (TVContract tvContract : tvContracts){
-                if (tvContract.getId()==id){
-                    return tvContract;
-                }
+    public Contract getTVContract(int id){
+        for (int i = 0; i < count; i++){
+            if ((contracts[i] instanceof TVContract) &&
+                    ((TVContract)contracts[i]).getId() == id){
+                return contracts[i];
             }
-        } catch (NullPointerException e){
-            return null;
         }
         return null;
     }
 
     /**
-     * adds new internet contract
-     * @param internetContract
+     * adds new contract
+     * @param contract
      */
-    public void addInternetContract(InternetContract internetContract){
+    public void addContract(Contract contract) {
 
-        if(internetContractCount + 1 > internetContracts.length){
-            InternetContract[] internetContracts_new = new InternetContract[internetContractCount*2];
-            int i;
-            for(i = 0; i < internetContractCount; i++){
-                internetContracts_new[i] = internetContracts[i];
-            }
-            internetContracts_new[internetContractCount++] = internetContract;
-            internetContracts=internetContracts_new;
+        if (count + 1 > contracts.length) {
+            enlarge();
         }
+        contracts[count++] = contract;
 
-        internetContracts[internetContractCount++] = internetContract;
+        if (contract instanceof InternetContract){
+            countInternetContracts++;
+        }
+        else if (contract instanceof PhoneContract) {
+            countPhoneContracts++;
+        }
+        else {
+            countTVContracts++;
+        }
     }
 
     /**
-     * adds new phone contract
-     * @param phoneContract
+     * adds array of contracts
+     * @param array
      */
-    public void  addPhoneContract(PhoneContract phoneContract){
-        if(phoneContractCount + 1 > phoneContracts.length){
-            PhoneContract[] phoneContracts_new = new PhoneContract[phoneContractCount*2];
-            int i;
-            for(i = 0; i<phoneContractCount; i++){
-                phoneContracts_new[i] = phoneContracts[i];
-            }
-            phoneContracts_new[phoneContractCount++] = phoneContract;
-            phoneContracts = phoneContracts_new;
+    public void addContracts(Contract[] array){
+        while (count + array.length > contracts.length){
+            enlarge();
+        }
+        for (int i = 0; i < array.length; i++){
+            contracts[count++] = array[i];
         }
 
-        phoneContracts[phoneContractCount++] = phoneContract;
+        if (array instanceof InternetContract[]){
+            countInternetContracts += array.length;
+        }
+        else if (array instanceof PhoneContract[]){
+            countPhoneContracts += array.length;
+        }
+        else {
+            countTVContracts += array.length;
+        }
     }
 
     /**
-     * adds new tv contract
-     * @param tvContract
+     * makes array twice bigger
      */
-    public void addTVContract(TVContract tvContract){
-        if(tvContractCount + 1 > tvContracts.length){
-            TVContract[] tvContracts_new = new TVContract[tvContractCount*2];
-            int i;
-            for(i = 0;i < tvContractCount; i++){
-                tvContracts_new[i] = tvContracts[i];
-            }
-            tvContracts_new[tvContractCount++] = tvContract;
-            tvContracts = tvContracts_new;
+    public void enlarge(){
+        Contract[] array_new = new Contract[count * 2];
+        for (int i = 0; i < count; i++){
+            array_new[i] = contracts[i];
         }
+        contracts = array_new;
+    }
 
-        tvContracts[tvContractCount++] = tvContract;
+    /**
+     * puts all null entities in the end of array
+     */
+    public void trimArray(){
+        Contract[] contracts_new = new Contract[contracts.length];
+        int size = 0;
+        for (int i = 0; i < contracts.length - 1; i++){
+            if (contracts[i] != null){
+                contracts_new[size++] = contracts[i];
+            }
+        }
+        contracts = contracts_new;
     }
 
     /**
@@ -151,9 +185,13 @@ public class Repository {
      * @return boolean - deleted or not found
      */
     public boolean deleteInternetContract(int id){
-        for (int i = 0; i < internetContractCount && internetContracts[i] != null; i++){
-            if (internetContracts[i].getId() == id){
-                internetContracts[i] = null;
+        for (int i = 0; i < count; i++){
+            if (contracts[i] instanceof InternetContract &&
+                    ((InternetContract)contracts[i]).getId() == id){
+                contracts[i] = null;
+                trimArray();
+                countInternetContracts--;
+                count--;
                 return true;
             }
         }
@@ -166,9 +204,13 @@ public class Repository {
      * @return boolean - deleted or not found
      */
     public boolean deletePhoneContract(int id){
-        for (int i = 0; i < phoneContractCount && phoneContracts[i] != null; i++){
-            if (phoneContracts[i].getId() == id){
-                phoneContracts[i] = null;
+        for (int i = 0; i < count; i++){
+            if (contracts[i] instanceof PhoneContract &&
+                    ((PhoneContract)contracts[i]).getId() == id){
+                contracts[i] = null;
+                trimArray();
+                countPhoneContracts--;
+                count--;
                 return true;
             }
         }
@@ -181,9 +223,13 @@ public class Repository {
      * @return boolean - deleted or not found
      */
     public boolean deleteTVContract(int id){
-        for (int i = 0; i < tvContractCount && tvContracts[i] != null; i++){
-            if (tvContracts[i].getId() == id){
-                tvContracts[i] = null;
+        for (int i = 0; i < count; i++){
+            if (contracts[i] instanceof TVContract &&
+                    ((TVContract)contracts[i]).getId() == id){
+                contracts[i] = null;
+                trimArray();
+                countTVContracts--;
+                count--;
                 return true;
             }
         }
@@ -197,9 +243,10 @@ public class Repository {
      * @return boolean - replaced or not found
      */
     public boolean replaceInternetContract(int id, InternetContract internetContract){
-        for (int i =0;i < internetContractCount && internetContracts[i] != null; i++){
-            if (internetContracts[i].getId() == id){
-                internetContracts[i] = internetContract;
+        for (int i =0; i < count; i++){
+            if (contracts[i] instanceof InternetContract &&
+                    ((InternetContract)contracts[i]).getId() == id){
+                contracts[i] = internetContract;
                 return true;
             }
         }
@@ -213,9 +260,10 @@ public class Repository {
      * @return boolean - replaced or not found
      */
     public boolean replacePhoneContract(int id, PhoneContract phoneContract){
-        for (int i =0;i < phoneContractCount && phoneContracts[i] != null; i++){
-            if (phoneContracts[i].getId() == id){
-                phoneContracts[i] = phoneContract;
+        for (int i =0; i < count; i++){
+            if (contracts[i] instanceof PhoneContract &&
+                    ((PhoneContract)contracts[i]).getId() == id){
+                contracts[i] = phoneContract;
                 return true;
             }
         }
@@ -229,9 +277,10 @@ public class Repository {
      * @return boolean - replaced or not found
      */
     public boolean replaceTVContract(int id, TVContract tvContract){
-        for (int i =0;i < tvContractCount && tvContracts[i] != null; i++){
-            if (tvContracts[i].getId() == id){
-                tvContracts[i] = tvContract;
+        for (int i =0; i < count; i++){
+            if (contracts[i] instanceof TVContract &&
+                    ((TVContract)contracts[i]).getId() == id){
+                contracts[i] = tvContract;
                 return true;
             }
         }
