@@ -1,8 +1,7 @@
 package model;
 
-import org.joda.time.LocalDate;
-
 import java.util.Calendar;
+import java.util.Objects;
 
 public class User {
     private int id;
@@ -43,7 +42,6 @@ public class User {
                         (Calendar.getInstance().get(Calendar.DATE) > birth.get(Calendar.DATE)))){
             age++;
         }
-        //сделать валидацию данных и тесты к ней
     }
 
     public User(int id, String lastName) {
@@ -51,6 +49,37 @@ public class User {
         this.lastName = lastName;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", lastName='" + lastName + '\'' +
+                ", birth=" + birth +
+                ", sex=" + sex +
+                ", passportNumber=" + passportNumber +
+                ", passportSeries=" + passportSeries +
+                ", age=" + age +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id &&
+                passportNumber == user.passportNumber &&
+                passportSeries == user.passportSeries &&
+                age == user.age &&
+                Objects.equals(lastName, user.lastName) &&
+                Objects.equals(birth, user.birth) &&
+                sex == user.sex;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, lastName, birth, sex, passportNumber, passportSeries, age);
+    }
 
     public int getAge() {
         return age;

@@ -1,13 +1,8 @@
 package model;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class PhoneContract extends Contract {
-    private int id;
-    private Calendar start;
-    private Calendar finish;
-    private User user;
 
     private int mbInternet;
     private int sms;
@@ -18,16 +13,16 @@ public class PhoneContract extends Contract {
                          User user,
                          int mbInternet,
                          int sms) {
-        this.id = id;
-        this.start = start;
-        this.finish = finish;
-        this.user = user;
-        this.mbInternet=mbInternet;
-        this.sms=sms;
+        this.setId(id);
+        this.setStart(start);
+        this.setFinish(finish);
+        this.setUser(user);
+        this.mbInternet = mbInternet;
+        this.sms = sms;
     }
 
     public PhoneContract(int id) {
-        this.id = id;
+    this.setId(id);
     }
 
     public int getMbInternet() {
@@ -44,37 +39,5 @@ public class PhoneContract extends Contract {
 
     public void setSms(int sms) {
         this.sms = sms;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Calendar getStart() {
-        return start;
-    }
-
-    public void setStart(Calendar start) {
-        this.start = start;
-    }
-
-    public Calendar getFinish() {
-        return finish;
-    }
-
-    public void setFinish(Calendar finish) {
-        this.finish = finish;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 }

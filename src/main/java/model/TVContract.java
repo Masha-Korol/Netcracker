@@ -3,26 +3,22 @@ package model;
 import java.util.Calendar;
 
 public class TVContract extends Contract {
-    private int id;
-    private Calendar start;
-    private Calendar finish;
-    private User user;
     private CanalPackage canalPackage;
-    
+
     public TVContract(int id,
                       Calendar start,
                       Calendar finish,
                       User user,
                       CanalPackage canalPackage) {
-        this.id = id;
-        this.start = start;
-        this.finish = finish;
-        this.user = user;
-        this.canalPackage=canalPackage;
+        this.setId(id);
+        this.setStart(start);
+        this.setFinish(finish);
+        this.setUser(user);
+        this.canalPackage = canalPackage;
     }
 
     public TVContract(int id) {
-        this.id = id;
+        this.setId(id);
     }
 
     public CanalPackage getCanalPackage() {
@@ -33,35 +29,4 @@ public class TVContract extends Contract {
         this.canalPackage = canalPackage;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Calendar getStart() {
-        return start;
-    }
-
-    public void setStart(Calendar start) {
-        this.start = start;
-    }
-
-    public Calendar getFinish() {
-        return finish;
-    }
-
-    public void setFinish(Calendar finish) {
-        this.finish = finish;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 }

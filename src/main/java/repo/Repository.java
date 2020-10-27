@@ -242,7 +242,7 @@ public class Repository {
      * @param internetContract contract with which replace
      * @return boolean - replaced or not found
      */
-    public boolean replaceInternetContract(int id, InternetContract internetContract){
+    public boolean replaceInternetContract(int id, Contract internetContract){
         for (int i =0; i < count; i++){
             if (contracts[i] instanceof InternetContract &&
                     ((InternetContract)contracts[i]).getId() == id){
@@ -259,7 +259,7 @@ public class Repository {
      * @param phoneContract contract with which replace
      * @return boolean - replaced or not found
      */
-    public boolean replacePhoneContract(int id, PhoneContract phoneContract){
+    public boolean replacePhoneContract(int id, Contract phoneContract){
         for (int i =0; i < count; i++){
             if (contracts[i] instanceof PhoneContract &&
                     ((PhoneContract)contracts[i]).getId() == id){
@@ -276,7 +276,7 @@ public class Repository {
      * @param tvContract contract with which replace
      * @return boolean - replaced or not found
      */
-    public boolean replaceTVContract(int id, TVContract tvContract){
+    public boolean replaceTVContract(int id, Contract tvContract){
         for (int i =0; i < count; i++){
             if (contracts[i] instanceof TVContract &&
                     ((TVContract)contracts[i]).getId() == id){
