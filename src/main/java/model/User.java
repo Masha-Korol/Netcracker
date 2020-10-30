@@ -1,5 +1,7 @@
 package model;
 
+import model.enums.Sex;
+
 import java.util.Calendar;
 import java.util.Objects;
 

@@ -4,16 +4,16 @@ import java.util.Calendar;
 
 public abstract class Contract {
 
-    private int id;
+    private Integer id;
     private Calendar start;
     private Calendar finish;
     private User user;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -46,7 +46,7 @@ public abstract class Contract {
      * @return boolean - validated or not
      */
     public boolean validateContract(Calendar start, Calendar finish){
-        if (start.compareTo(finish) > 0 || start.compareTo(Calendar.getInstance()) > 0){
+        if (start.compareTo(finish) > 0 || start.equals(finish)){
             return false;
         }
         return true;

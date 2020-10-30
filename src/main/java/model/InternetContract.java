@@ -6,7 +6,7 @@ public class InternetContract extends Contract {
 
     private int maxInternetSpeedMb;
 
-    public InternetContract(int id,
+    public InternetContract(Integer id,
                             Calendar start,
                             Calendar finish,
                             User user,
@@ -18,8 +18,15 @@ public class InternetContract extends Contract {
         this.setMaxInternetSpeedMb(maxInternetSpeedMb);
     }
 
-    public InternetContract(int id) {
+    public InternetContract(Integer id) {
         this.setId(id);
+    }
+
+    public InternetContract(Integer id, Calendar start, Calendar finish, User user){
+        this.setId(id);
+        this.setStart(start);
+        this.setFinish(finish);
+        this.setUser(user);
     }
 
     public int getMaxInternetSpeedMb() {

@@ -5,7 +5,48 @@ import model.*;
 public class Repository {
     final int DEFAULT_CAPACITY = 16;
     private int count;
+    private ISorter sorter = new BubbleSorter();
     Contract[] contracts = new Contract[DEFAULT_CAPACITY];
+
+    /**
+     * sorts array of contracts, using injected type of sort
+     * @param crit
+     */
+    public void sort(String crit){
+        sorter.sort(contracts, crit, count);
+    }
+
+    private boolean compare(String crit, Contract contract, Object par){
+        switch (crit){
+            case "id":
+                return contract.getId().equals(par);
+            case "start":
+                return contract.getStart().equals(par);
+            case "finish":
+                return contract.getFinish().equals(par);
+            case "user":
+                return contract.getUser().equals(par);
+            default:
+                return false;
+        }
+    }
+
+    /**
+     * gets all contracts by criteria
+     * @param crit - criteria (property of entity)
+     * @param par - value by which contracts will be chosen
+     * @return array of contracts
+     */
+    public Contract[] getContracts(String crit, Object par){
+        Contract[] result = new Contract[count];
+        int size = 0;
+        for (int i = 0; i < count; i++){
+            if (compare(crit, contracts[i], par)){
+                result[size++] = contracts[i];
+            }
+        }
+        return result;
+    }
 
     /**
      * gets all contracts

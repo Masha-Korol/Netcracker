@@ -8,11 +8,16 @@ import java.util.Calendar;
 
 public class PhoneContractFactory extends Factory {
     @Override
-    public Contract createContract(int id) {
+    public Contract createContract(Integer id) {
     return new PhoneContract(id);
     }
 
-    public Contract createContract(int id,
+    @Override
+    public Contract createContract(Integer id, Calendar start, Calendar finish, User user) {
+        return new PhoneContract(id, start, finish, user);
+    }
+
+    public Contract createContract(Integer id,
                                    Calendar start,
                                    Calendar finish,
                                    User user,

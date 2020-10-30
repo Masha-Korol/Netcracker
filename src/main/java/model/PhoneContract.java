@@ -7,7 +7,7 @@ public class PhoneContract extends Contract {
     private int mbInternet;
     private int sms;
 
-    public PhoneContract(int id,
+    public PhoneContract(Integer id,
                          Calendar start,
                          Calendar finish,
                          User user,
@@ -21,8 +21,15 @@ public class PhoneContract extends Contract {
         this.sms = sms;
     }
 
-    public PhoneContract(int id) {
+    public PhoneContract(Integer id) {
     this.setId(id);
+    }
+
+    public PhoneContract(Integer id, Calendar start, Calendar finish, User user){
+        this.setId(id);
+        this.setStart(start);
+        this.setFinish(finish);
+        this.setUser(user);
     }
 
     public int getMbInternet() {
