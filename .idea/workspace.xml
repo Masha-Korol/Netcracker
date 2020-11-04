@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fe84756-70e6-4177-9990-9b2b9c7337f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/repo/ComparatorFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repo/PredicateFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/script-dir/external/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/external/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/script-dir/jquery-3.4.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jquery-3.4.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/script-dir/jquery-ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jquery-ui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/script-dir/jquery-ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jquery-ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/script-dir/jquery-ui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jquery-ui.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/script-dir/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jquery-ui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/script-dir/jquery-ui.structure.css" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jquery-ui.structure.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/script-dir/jquery-ui.structure.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jquery-ui.structure.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/script-dir/jszip-utils/dist/jszip-utils-ie.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jszip-utils/dist/jszip-utils-ie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/script-dir/jszip-utils/dist/jszip-utils-ie.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jszip-utils/dist/jszip-utils-ie.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/script-dir/jszip-utils/dist/jszip-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jszip-utils/dist/jszip-utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/script-dir/jszip-utils/dist/jszip-utils.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jszip-utils/dist/jszip-utils.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/script-dir/jszip/dist/jszip.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jszip/dist/jszip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/script-dir/jszip/dist/jszip.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jszip/dist/jszip.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repo/BubbleSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repo/BubbleSorter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repo/ISorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repo/ISorter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repo/MergeSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repo/MergeSorter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repo/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repo/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/repo/RepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/repo/RepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/CanalPackage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Sex.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +55,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
@@ -206,6 +187,7 @@
       <workItem from="1604132340424" duration="119000" />
       <workItem from="1604258305015" duration="10000" />
       <workItem from="1604478238122" duration="2664000" />
+      <workItem from="1604503315437" duration="103000" />
     </task>
     <servers />
   </component>
@@ -229,10 +211,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="368" y="9" key="#Main/0.0.1280.680@0.0.1280.680" timestamp="1603985999395" />
-    <state x="233" y="2" key="#Project_Structure" timestamp="1603363133636">
+    <state x="233" y="2" key="#Project_Structure" timestamp="1604503384652">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="2" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1603363133636" />
+    <state x="233" y="2" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1604503384652" />
     <state x="446" y="60" key="#com.intellij.ide.util.MemberChooser" timestamp="1604052517195">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -241,10 +223,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="443" y="210" width="394" height="265" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1603378709350" />
-    <state x="371" y="91" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604049559575">
+    <state x="371" y="91" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604503347723">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="91" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604049559575" />
+    <state x="371" y="91" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604503347723" />
     <state x="271" y="0" key="#netcracker_[test]" timestamp="1603372418639">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
