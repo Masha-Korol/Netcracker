@@ -78,6 +78,11 @@ public class User {
                 sex == user.sex;
     }
 
+    public boolean isUserSameAs(User user){
+        return this.passportNumber == user.passportNumber &&
+                this.passportSeries == user.passportSeries;
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(id, lastName, birth, sex, passportNumber, passportSeries, age);

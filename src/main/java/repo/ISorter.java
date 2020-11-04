@@ -2,12 +2,13 @@ package repo;
 
 import model.Contract;
 
+import java.util.Comparator;
+
 public interface ISorter {
     /**
      * sorts passed array
      * @param contracts array of contracts
-     * @param crit criteria (property) by which you do the sort
-     * @param count size of array (number of objects)
+     * @param comparator criteria (property) by which you do the sort
      */
-    void sort(Contract[] contracts, String crit, int count);
+    void sort(Contract[] contracts, Comparator<Contract> comparator);
 }
