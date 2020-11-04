@@ -2,81 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fe84756-70e6-4177-9990-9b2b9c7337f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/enums/CanalPackage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/enums/Sex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repo/BubbleSorter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repo/ISorter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repo/MergeSorter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repo/ComparatorFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repo/PredicateFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/class-use/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/class-use/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/element-list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/factory/Factory.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/factory/Factory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/factory/InternetContractFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/factory/InternetContractFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/factory/PhoneContractFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/factory/PhoneContractFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/factory/TVContractFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/factory/TVContractFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/factory/class-use/Factory.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/factory/class-use/Factory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/factory/class-use/InternetContractFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/factory/class-use/InternetContractFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/factory/class-use/PhoneContractFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/factory/class-use/PhoneContractFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/factory/class-use/TVContractFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/factory/class-use/TVContractFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/factory/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/factory/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/factory/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/factory/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/factory/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/factory/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-15.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-16.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-17.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/member-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/member-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/member-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/model/Contract.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/model/Contract.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/model/InternetContract.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/model/InternetContract.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/model/PhoneContract.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/model/PhoneContract.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/model/TVContract.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/model/TVContract.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/model/User.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/model/User.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/model/class-use/Contract.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/model/class-use/Contract.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/model/class-use/InternetContract.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/model/class-use/InternetContract.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/model/class-use/PhoneContract.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/model/class-use/PhoneContract.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/model/class-use/TVContract.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/model/class-use/TVContract.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/model/class-use/User.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/model/class-use/User.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/model/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/model/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/model/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/model/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/model/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/model/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/overview-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/package-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/package-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/package-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/repo/Repository.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/repo/Repository.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/repo/RepositoryTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/repo/RepositoryTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/repo/class-use/Repository.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/repo/class-use/Repository.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/repo/class-use/RepositoryTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/repo/class-use/RepositoryTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/repo/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/repo/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/repo/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/repo/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/repo/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/repo/package-use.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/documentation/script-dir/external/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/external/jquery/jquery.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/documentation/script-dir/jquery-3.4.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jquery-3.4.1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/documentation/script-dir/jquery-ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jquery-ui.css" afterDir="false" />
@@ -91,20 +19,9 @@
       <change beforePath="$PROJECT_DIR$/documentation/script-dir/jszip-utils/dist/jszip-utils.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jszip-utils/dist/jszip-utils.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/documentation/script-dir/jszip/dist/jszip.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jszip/dist/jszip.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/documentation/script-dir/jszip/dist/jszip.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/script-dir/jszip/dist/jszip.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/type-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/type-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factory/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factory/InternetContractFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/InternetContractFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factory/PhoneContractFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/PhoneContractFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factory/TVContractFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/TVContractFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/CanalPackage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Contract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/InternetContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/InternetContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/PhoneContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PhoneContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Sex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/TVContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/TVContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repo/BubbleSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repo/BubbleSorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repo/ISorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repo/ISorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repo/MergeSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repo/MergeSorter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repo/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repo/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/repo/RepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/repo/RepositoryTest.java" afterDir="false" />
     </list>
@@ -166,21 +83,21 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="repo" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="repo" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="repo" />
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\IdeaProjects\java-courses-spring\netcracker\src\main\java\model" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="repo" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.RepositoryTest (1)">
+  <component name="RunManager" selected="JUnit.RepositoryTest.getContracts">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Netcracker" />
@@ -218,9 +135,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RepositoryTest.getContracts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Netcracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repo" />
+      <option name="MAIN_CLASS_NAME" value="repo.RepositoryTest" />
+      <option name="METHOD_NAME" value="getContracts" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RepositoryTest.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Netcracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repo" />
+      <option name="MAIN_CLASS_NAME" value="repo.RepositoryTest" />
+      <option name="METHOD_NAME" value="name" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RepositoryTest (1)" />
+        <item itemvalue="JUnit.RepositoryTest.getContracts" />
+        <item itemvalue="JUnit.RepositoryTest.name" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.RepositoryTest" />
       </list>
@@ -252,7 +202,10 @@
       <workItem from="1603985034587" duration="1752000" />
       <workItem from="1603988083632" duration="11000" />
       <workItem from="1603990814314" duration="5000" />
-      <workItem from="1604047713779" duration="6599000" />
+      <workItem from="1604047713779" duration="6964000" />
+      <workItem from="1604132340424" duration="119000" />
+      <workItem from="1604258305015" duration="10000" />
+      <workItem from="1604478238122" duration="2664000" />
     </task>
     <servers />
   </component>
@@ -296,10 +249,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="271" y="0" key="#netcracker_[test]/0.0.1280.680@0.0.1280.680" timestamp="1603372418639" />
-    <state x="404" y="98" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604054063927">
+    <state x="404" y="98" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604480944050">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="404" y="98" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1604054063927" />
+    <state x="404" y="98" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1604480944050" />
     <state width="456" height="466" key="DebuggerActiveHint" timestamp="1603485071675">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -308,38 +261,38 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="348" y="85" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603397161583" />
-    <state width="1237" height="29" key="GridCell.Tab.0.bottom" timestamp="1604054546527">
+    <state width="1237" height="10" key="GridCell.Tab.0.bottom" timestamp="1604480944214">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="29" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604054546527" />
-    <state width="1237" height="29" key="GridCell.Tab.0.center" timestamp="1604054546527">
+    <state width="1237" height="10" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604480944214" />
+    <state width="1237" height="10" key="GridCell.Tab.0.center" timestamp="1604480944214">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="29" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604054546527" />
-    <state width="1237" height="29" key="GridCell.Tab.0.left" timestamp="1604054546527">
+    <state width="1237" height="10" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604480944214" />
+    <state width="1237" height="10" key="GridCell.Tab.0.left" timestamp="1604480944214">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="29" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604054546527" />
-    <state width="1237" height="29" key="GridCell.Tab.0.right" timestamp="1604054546527">
+    <state width="1237" height="10" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604480944214" />
+    <state width="1237" height="10" key="GridCell.Tab.0.right" timestamp="1604480944214">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="29" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604054546527" />
-    <state width="1237" height="200" key="GridCell.Tab.1.bottom" timestamp="1604053548045">
+    <state width="1237" height="10" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604480944214" />
+    <state width="1237" height="200" key="GridCell.Tab.1.bottom" timestamp="1604479834820">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="200" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604053548045" />
-    <state width="1237" height="200" key="GridCell.Tab.1.center" timestamp="1604053548044">
+    <state width="1237" height="200" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604479834820" />
+    <state width="1237" height="200" key="GridCell.Tab.1.center" timestamp="1604479834820">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="200" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1604053548044" />
-    <state width="1237" height="200" key="GridCell.Tab.1.left" timestamp="1604053548044">
+    <state width="1237" height="200" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1604479834820" />
+    <state width="1237" height="200" key="GridCell.Tab.1.left" timestamp="1604479834819">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="200" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1604053548044" />
-    <state width="1237" height="200" key="GridCell.Tab.1.right" timestamp="1604053548044">
+    <state width="1237" height="200" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1604479834819" />
+    <state width="1237" height="200" key="GridCell.Tab.1.right" timestamp="1604479834820">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="200" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1604053548044" />
+    <state width="1237" height="200" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1604479834820" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1603381741969">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -348,10 +301,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603396544774" />
-    <state x="349" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1604047844614">
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1604258309007">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1604047844613" />
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1604258309007" />
     <state x="412" y="61" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1603365815381">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -364,10 +317,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="151" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1603970504433" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603396537069">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1604478932868">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1603396537069" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1604478932868" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

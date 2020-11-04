@@ -2,6 +2,9 @@ package repo;
 
 import model.*;
 
+import java.util.Comparator;
+import java.util.function.Predicate;
+
 public class Repository {
     final int DEFAULT_CAPACITY = 16;
     private int count;
@@ -10,38 +13,22 @@ public class Repository {
 
     /**
      * sorts array of contracts, using injected type of sort
-     * @param crit
+     * @param comparator
      */
-    public void sort(String crit){
-        sorter.sort(contracts, crit, count);
-    }
-
-    private boolean compare(String crit, Contract contract, Object par){
-        switch (crit){
-            case "id":
-                return contract.getId().equals(par);
-            case "start":
-                return contract.getStart().equals(par);
-            case "finish":
-                return contract.getFinish().equals(par);
-            case "user":
-                return contract.getUser().equals(par);
-            default:
-                return false;
-        }
+    public void sort(Comparator<Contract> comparator){
+        sorter.sort(contracts, comparator);
     }
 
     /**
      * gets all contracts by criteria
-     * @param crit - criteria (property of entity)
-     * @param par - value by which contracts will be chosen
+     * @param predicate
      * @return array of contracts
      */
-    public Contract[] getContracts(String crit, Object par){
+    public Contract[] getContracts(Predicate<Contract> predicate){
         Contract[] result = new Contract[count];
         int size = 0;
         for (int i = 0; i < count; i++){
-            if (compare(crit, contracts[i], par)){
+            if (predicate.test(contracts[i])){
                 result[size++] = contracts[i];
             }
         }

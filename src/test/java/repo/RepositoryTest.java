@@ -9,6 +9,7 @@ import model.User;
 import org.junit.jupiter.api.Test;
 
 import java.util.Calendar;
+import java.util.Comparator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -74,13 +75,18 @@ class RepositoryTest {
         repository.addContract(contract1);
         repository.addContract(contract2);
         repository.addContract(contract3);
-        Contract[] array = repository.getContracts("user", user1);
-        assertTrue(repository.getContracts("user", user1).length > 0);
+
+        PredicateFactory predicFactory = new PredicateFactory();
+        Contract[] array = repository.getContracts(predicFactory.createUserPredicate(user1));
+        assertTrue(repository.getContracts(predicFactory.createUserPredicate(user1)).length > 0);
     }
 
     @Test
     void sort() {
-    Repository repository = new Repository();
+        Repository repository = new Repository();
+        ComparatorFactory compFactory = new ComparatorFactory();
+        Comparator<Contract> idComparator = compFactory.createIdComparator();
+
         Factory factory = new InternetContractFactory();
         User user1 = new User(2, "a");
         User user2 = new User(3, "b");
@@ -92,10 +98,12 @@ class RepositoryTest {
         repository.addContract(contract2);
         repository.addContract(contract3);
         Contract[] array = new Contract[repository.getAllContracts().length];
-        array[0] = contract3;
+        array[0] = contract2;
         array[1] = contract1;
-        array[2] = contract2;
-        repository.sort("user");
+        array[2] = contract3;
+
+        repository.sort(idComparator);
+
         assertArrayEquals(repository.getAllContracts(), array);
     }
 }
