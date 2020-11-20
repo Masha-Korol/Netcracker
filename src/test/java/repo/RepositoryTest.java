@@ -78,13 +78,8 @@ class RepositoryTest {
         repository.addContract(contract3);
 
         PredicateFactory predicFactory = new PredicateFactory();
-<<<<<<< HEAD
-        Contract[] array = repository.getContracts(predicFactory.createUserPredicate(user1));
-        assertTrue(repository.getContracts(predicFactory.createUserPredicate(user1)).length > 0);
-=======
         Repository newRepo = repository.getContracts(predicFactory.createUserPredicate(user1));
         assertArrayEquals(newRepo.getAllContracts(), repository.getContracts(predicFactory.createUserPredicate(user1)).getAllContracts());
->>>>>>> task2
     }
 
     @Test
