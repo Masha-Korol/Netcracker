@@ -24,15 +24,15 @@ public class Repository {
      * @param predicate
      * @return array of contracts
      */
-    public Contract[] getContracts(Predicate<Contract> predicate){
-        Contract[] result = new Contract[count];
-        int size = 0;
+    public Repository getContracts(Predicate<Contract> predicate){
+        Repository repository = new Repository();
+
         for (int i = 0; i < count; i++){
             if (predicate.test(contracts[i])){
-                result[size++] = contracts[i];
+                repository.addContract(contracts[i]);
             }
         }
-        return result;
+        return repository;
     }
 
     /**
