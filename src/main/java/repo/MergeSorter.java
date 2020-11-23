@@ -5,6 +5,12 @@ import model.Contract;
 import java.util.Comparator;
 
 public class MergeSorter implements ISorter {
+
+    /**
+     * sorts array of contracts with merge sort
+     * @param contracts array of contracts
+     * @param comparator criteria (property) by which you do the sort
+     */
     @Override
     public void sort(Contract[] contracts, Comparator<Contract> comparator) {
         int count = 0;

@@ -5,6 +5,9 @@ import model.*;
 import java.util.Comparator;
 import java.util.function.Predicate;
 
+/**
+ * contains contracts and methods for its management
+ */
 public class Repository {
     final int DEFAULT_CAPACITY = 16;
     private int count;

@@ -4,6 +4,9 @@ import model.Contract;
 
 import java.util.Comparator;
 
+/**
+ * contains methods for comparators creating
+ */
 public class ComparatorFactory {
     public Comparator<Contract> createIdComparator(){
         return (o1, o2) -> o1.getId() - o2.getId();

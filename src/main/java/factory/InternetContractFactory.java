@@ -6,6 +6,9 @@ import model.User;
 
 import java.util.Calendar;
 
+/**
+ * contains methods for internet contracts creating
+ */
 public class InternetContractFactory extends Factory {
 
     @Override

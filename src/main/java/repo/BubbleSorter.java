@@ -4,12 +4,25 @@ import model.Contract;
 
 import java.util.Comparator;
 
+/**
+ *
+ */
 public class BubbleSorter implements ISorter {
 
+    /**
+     * sorts array of contracts with bubble sort
+     * @param contracts array of contracts
+     * @param comparator criteria (property) by which you do the sort
+     */
     @Override
     public void sort(Contract[] contracts, Comparator<Contract> comparator) {
-        for(int i = 0; i < contracts.length - 1 && contracts[i] != null; i++){
-            for(int j = 0; j < contracts.length - i - 1 && contracts[i] != null; j++){
+        int count = 0;
+        while(contracts[count] != null){
+            count++;
+        }
+
+        for(int i = 0; i < count - 1; i++){
+            for(int j = 0; j < count - i - 1; j++){
                 if(comparator.compare(contracts[j], contracts[j + 1]) > 0){
                     Contract contract = contracts[j];
                     contracts[j] = contracts[j + 1];

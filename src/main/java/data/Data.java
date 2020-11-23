@@ -3,6 +3,7 @@ package data;
 import factory.InternetContractFactory;
 import factory.PhoneContractFactory;
 import factory.TVContractFactory;
+import model.Contract;
 import model.User;
 import model.enums.CanalPackage;
 import model.enums.Sex;
@@ -13,6 +14,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+/**
+ * reads data from file, turns this into contracts and add to repository
+ */
 public class Data {
 
     private User[] users = new User[100];
@@ -24,7 +28,7 @@ public class Data {
      * @param file - fileReader
      * @throws Exception - in case something wrong with the file
      */
-    public void readFile(Repository repository, FileReader file) throws Exception {
+    public void readFile(Repository repository, FileReader file, Validator ... validators) throws Exception {
 
         BufferedReader reader = new BufferedReader(file);
         User user;
@@ -49,7 +53,7 @@ public class Data {
                 user = makeUser(string[3], string[4], string[6], string[5], passport);
 
                 makeContract(string[0], calendarStart, calendarFinish,
-                             string[8], string[9], user, repository);
+                             string[8], string[9], user, repository, validators);
 
                 line = reader.readLine();
 
@@ -60,27 +64,55 @@ public class Data {
         }
     }
 
+    private boolean validateContract(Contract contract, Validator... validators){
+
+        boolean result = true;
+        for(Validator validator : validators){
+            Validator validateResult = validator.validate(contract);
+            if(validateResult.getError() != 1){
+                System.out.println(validateResult.getMessage());
+                result = false;
+            }
+        }
+        return result;
+    }
+
     private void makeContract(String id,
-                              Calendar start, Calendar finish,
-                              String type, String addInfo,
-                              User user, Repository repository){
+                                  Calendar start, Calendar finish,
+                                  String type, String addInfo,
+                                  User user, Repository repository,
+                                  Validator ... validators){
 
         InternetContractFactory internetFactory = new InternetContractFactory();
         PhoneContractFactory phoneFactory = new PhoneContractFactory();
         TVContractFactory tvFactory = new TVContractFactory();
 
+        Contract contract;
+
         switch (type.toLowerCase()) {
             case "internet":
                 String[] speed = addInfo.split(":");
-                repository.addContract(internetFactory.createContract(Integer.parseInt(id),
-                        start, finish, user, Integer.parseInt(speed[1])));
+
+                contract = internetFactory.createContract(Integer.parseInt(id),
+                        start, finish, user, Integer.parseInt(speed[1]));
+
+                if(validateContract(contract, validators) == true){
+                    repository.addContract(contract);
+                }
+
                 break;
             case "phone":
                 String[] mb = addInfo.split(" ")[0].split(":");
                 String[] sms = addInfo.split(" ")[1].split(":");
-                repository.addContract(phoneFactory.createContract(Integer.parseInt(id),
+
+                contract = phoneFactory.createContract(Integer.parseInt(id),
                         start, finish, user,
-                        Integer.parseInt(mb[1]), Integer.parseInt(sms[1])));
+                        Integer.parseInt(mb[1]), Integer.parseInt(sms[1]));
+
+                if(validateContract(contract, validators) == true){
+                    repository.addContract(contract);
+                }
+
                 break;
             case "tv":
                 String[] pack = addInfo.split(":");
@@ -99,8 +131,11 @@ public class Data {
                         throw new IllegalStateException("Unexpected value: " + pack[1].toLowerCase());
                 }
 
-                repository.addContract(tvFactory.createContract(Integer.parseInt(id),
-                        start, finish, user, canalPackage));
+                contract = tvFactory.createContract(Integer.parseInt(id), start, finish, user, canalPackage);
+
+                if(validateContract(contract, validators) == true){
+                    repository.addContract(contract);
+                }
         }
 
     }

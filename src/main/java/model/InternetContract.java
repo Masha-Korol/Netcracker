@@ -2,6 +2,9 @@ package model;
 
 import java.util.Calendar;
 
+/**
+ * represents an internet contract
+ */
 public class InternetContract extends Contract {
 
     private int maxInternetSpeedMb;

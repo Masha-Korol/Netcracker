@@ -4,6 +4,9 @@ import model.enums.CanalPackage;
 
 import java.util.Calendar;
 
+/**
+ * represents a tv contract
+ */
 public class TVContract extends Contract {
     private CanalPackage canalPackage;
 

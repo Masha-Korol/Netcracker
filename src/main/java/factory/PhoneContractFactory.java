@@ -6,6 +6,9 @@ import model.User;
 
 import java.util.Calendar;
 
+/**
+ * contains methods for phone contracts creating
+ */
 public class PhoneContractFactory extends Factory {
     @Override
     public Contract createContract(Integer id) {

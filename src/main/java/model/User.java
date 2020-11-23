@@ -5,6 +5,9 @@ import model.enums.Sex;
 import java.util.Calendar;
 import java.util.Objects;
 
+/**
+ * represents user
+ */
 public class User {
     private int id;
     private String lastName;

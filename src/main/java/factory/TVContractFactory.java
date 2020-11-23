@@ -7,6 +7,9 @@ import model.enums.CanalPackage;
 
 import java.util.Calendar;
 
+/**
+ * contains methods for tv contracts creating
+ */
 public class TVContractFactory extends Factory {
 
     @Override

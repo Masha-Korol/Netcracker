@@ -2,6 +2,9 @@ package model;
 
 import java.util.Calendar;
 
+/**
+ * represents a phone contract
+ */
 public class PhoneContract extends Contract {
 
     private int mbInternet;
