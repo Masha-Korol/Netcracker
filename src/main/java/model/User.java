@@ -135,7 +135,7 @@ public class User {
         this.passportNumber = passportNumber;
     }
 
-    public Long getPassportSeries() {
+    public long getPassportSeries() {
         return passportSeries;
     }
 

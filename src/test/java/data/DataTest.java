@@ -2,11 +2,10 @@ package data;
 
 import org.junit.jupiter.api.Test;
 import repo.Repository;
+import validator.DateValidator;
+import validator.UserValidator;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class DataTest {
 

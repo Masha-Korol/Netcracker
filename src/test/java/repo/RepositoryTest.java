@@ -1,22 +1,12 @@
 package repo;
 
-import data.Data;
-import data.DateValidator;
-import data.UserValidator;
 import factory.Factory;
 import factory.InternetContractFactory;
 import factory.TVContractFactory;
 import model.Contract;
 import model.User;
-import org.assertj.core.internal.cglib.asm.$ClassReader;
-import org.junit.Before;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
-import org.testng.annotations.BeforeClass;
 
-import java.io.FileReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

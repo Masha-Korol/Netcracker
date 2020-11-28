@@ -1,8 +1,10 @@
-package data;
+package validator;
 
 import model.Contract;
 
 import java.util.Calendar;
+
+import static validator.ErrorStatus.*;
 
 /**
  * contains info about contract validation by user property: error code and massage
@@ -19,17 +21,21 @@ public class UserValidator extends Validator {
 
         if (contract.getUser().getBirth().compareTo(Calendar.getInstance()) > 0) {
             this.setMessage("birth date is not valid");
-            this.setError(-1);
+            this.setErrorStatus(ERROR);
+            this.setErrorString(contract.getUser().getBirth().toString());
         } else if ((int) (Math.log10(contract.getUser().getPassportNumber()) + 1) != 4 ||
                 (int) (Math.log10(contract.getUser().getPassportSeries()) + 1) != 6) {
             this.setMessage("passport data is not valid");
-            this.setError(-1);
+            this.setErrorStatus(ERROR);
+            this.setErrorString(contract.getUser().getPassportNumber()+ " " +
+                                contract.getUser().getPassportSeries());
         } else if (contract.getUser().getLastName().equals("")) {
             this.setMessage("user's name is null");
-            this.setError(0);
+            this.setErrorStatus(WORN);
+            this.setErrorString(contract.getUser().getId()+"");
         } else {
             this.setMessage("");
-            this.setError(1);
+            this.setErrorStatus(OKAY);
         }
         return this;
     }

@@ -8,11 +8,16 @@ import model.User;
 import model.enums.CanalPackage;
 import model.enums.Sex;
 import repo.Repository;
+import validator.ErrorStatus;
+import validator.Validator;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
+import static validator.ErrorStatus.ERROR;
 
 /**
  * reads data from file, turns this into contracts and add to repository
@@ -28,7 +33,7 @@ public class Data {
      * @param file - fileReader
      * @throws Exception - in case something wrong with the file
      */
-    public void readFile(Repository repository, FileReader file, Validator ... validators) throws Exception {
+    public void readFile(Repository repository, FileReader file, Validator... validators) throws Exception {
 
         BufferedReader reader = new BufferedReader(file);
         User user;
@@ -69,7 +74,7 @@ public class Data {
         boolean result = true;
         for(Validator validator : validators){
             Validator validateResult = validator.validate(contract);
-            if(validateResult.getError() != 1){
+            if(validateResult.getErrorStatus() != ERROR){
                 System.out.println(validateResult.getMessage());
                 result = false;
             }
