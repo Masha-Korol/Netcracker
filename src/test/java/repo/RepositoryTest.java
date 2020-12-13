@@ -18,12 +18,6 @@ class RepositoryTest {
 
     private Repository repository;
 
-    /*@BeforeClass
-    public void initBeforeAll(){
-        repository = new Repository();
-    }*/
-    //TODO настроить repository injection
-
     @Test
     void getAllContracts() {
         Repository repository = new Repository();

@@ -1,6 +1,7 @@
-package repo;
+package mergesorter;
 
 import model.Contract;
+import sorter.ISorter;
 
 import java.util.Comparator;
 
@@ -20,44 +21,44 @@ public class MergeSorter implements ISorter {
         mergeSort(contracts, count, comparator);
     }
 
-    private void mergeSort(Contract[] A, int sizeA, Comparator<Contract> comparator){
+    private void mergeSort(Contract[] arrayA, int sizeA, Comparator<Contract> comparator){
         if (sizeA > 1){
-            Contract[] B = new Contract[sizeA / 2];
-            Contract[] C = new Contract[sizeA - sizeA / 2];
+            Contract[] arrayB = new Contract[sizeA / 2];
+            Contract[] arrayC = new Contract[sizeA - sizeA / 2];
 
             for (int i = 0; i < sizeA / 2; i++)
-                B[i] = A[i];
+                arrayB[i] = arrayA[i];
             for (int i = sizeA / 2; i < sizeA; i++)
-                C[i - sizeA / 2] = A[i];
+                arrayC[i - sizeA / 2] = arrayA[i];
 
-            mergeSort(B, sizeA / 2, comparator);
-            mergeSort(C, sizeA - sizeA / 2, comparator);
-            merge(A, B, C, sizeA / 2, sizeA - sizeA / 2, comparator);
+            mergeSort(arrayB, sizeA / 2, comparator);
+            mergeSort(arrayC, sizeA - sizeA / 2, comparator);
+            merge(arrayA, arrayB, arrayC, sizeA / 2, sizeA - sizeA / 2, comparator);
         }
     }
 
-    private void merge(Contract[] A, Contract[] B, Contract[] C,
+    private void merge(Contract[] arrayA, Contract[] arrayB, Contract[] arrayC,
                        int sizeB, int sizeC, Comparator<Contract> comparator){
         int i = 0, j = 0, k = 0;
         while (i < sizeB && j < sizeC)
         {
-            if (comparator.compare(C[j], B[i]) > 0)
+            if (comparator.compare(arrayC[j], arrayB[i]) > 0)
             {
-                A[k] = B[i];
+                arrayA[k] = arrayB[i];
                 i++;
             }
             else
             {
-                A[k] = C[j];
+                arrayA[k] = arrayC[j];
                 j++;
             }
             k++;
         }
         if (i == sizeB)
             for (int t = j; t < sizeC; t++)
-                A[k++] = C[t];
+                arrayA[k++] = arrayC[t];
         else
             for (int t = i; t < sizeB; t++)
-                A[k++] = B[t];
+                arrayA[k++] = arrayB[t];
     }
 }

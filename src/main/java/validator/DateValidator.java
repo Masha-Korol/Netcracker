@@ -1,9 +1,7 @@
 package validator;
 
 import model.Contract;
-
 import java.util.Calendar;
-
 import static validator.ErrorStatus.*;
 
 /**

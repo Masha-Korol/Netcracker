@@ -1,6 +1,9 @@
 package repo;
 
+import annotation.Inject;
 import model.*;
+import sorter.BubbleSorter;
+import sorter.ISorter;
 
 import java.util.Comparator;
 import java.util.function.Predicate;
@@ -11,7 +14,8 @@ import java.util.function.Predicate;
 public class Repository {
     final int DEFAULT_CAPACITY = 16;
     private int count;
-    private ISorter sorter = new BubbleSorter();
+    @Inject
+    private ISorter sorter;
     Contract[] contracts = new Contract[DEFAULT_CAPACITY];
 
     /**
@@ -89,25 +93,25 @@ public class Repository {
      * makes array twice bigger
      */
     private void enlarge(){
-        Contract[] array_new = new Contract[count * 2];
+        Contract[] arrayNew = new Contract[count * 2];
         for (int i = 0; i < count; i++){
-            array_new[i] = contracts[i];
+            arrayNew[i] = contracts[i];
         }
-        contracts = array_new;
+        contracts = arrayNew;
     }
 
     /**
      * puts all null entities in the end of array
      */
     private void trimArray(){
-        Contract[] contracts_new = new Contract[contracts.length];
+        Contract[] contractsNew = new Contract[contracts.length];
         int size = 0;
         for (int i = 0; i < contracts.length - 1; i++){
             if (contracts[i] != null){
-                contracts_new[size++] = contracts[i];
+                contractsNew[size++] = contracts[i];
             }
         }
-        contracts = contracts_new;
+        contracts = contractsNew;
     }
 
     /**

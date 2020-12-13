@@ -1,5 +1,6 @@
 package data;
 
+import annotation.Inject;
 import factory.InternetContractFactory;
 import factory.PhoneContractFactory;
 import factory.TVContractFactory;
@@ -8,16 +9,15 @@ import model.User;
 import model.enums.CanalPackage;
 import model.enums.Sex;
 import repo.Repository;
-import validator.ErrorStatus;
 import validator.Validator;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
+import java.util.List;
 import static validator.ErrorStatus.ERROR;
+import org.apache.logging.log4j.*;
 
 /**
  * reads data from file, turns this into contracts and add to repository
@@ -26,6 +26,9 @@ public class Data {
 
     private User[] users = new User[100];
     private int countUsers = 0;
+    @Inject(clazz = Validator.class)
+    private static List<Validator> validators;
+    private static final Logger logger = LogManager.getLogger(Data.class);
 
     /**
      * reads from file data to repository
@@ -33,7 +36,7 @@ public class Data {
      * @param file - fileReader
      * @throws Exception - in case something wrong with the file
      */
-    public void readFile(Repository repository, FileReader file, Validator... validators) throws Exception {
+    public void readFile(Repository repository, FileReader file) throws Exception {
 
         BufferedReader reader = new BufferedReader(file);
         User user;
@@ -58,7 +61,7 @@ public class Data {
                 user = makeUser(string[3], string[4], string[6], string[5], passport);
 
                 makeContract(string[0], calendarStart, calendarFinish,
-                             string[8], string[9], user, repository, validators);
+                             string[8], string[9], user, repository);
 
                 line = reader.readLine();
 
@@ -69,13 +72,12 @@ public class Data {
         }
     }
 
-    private boolean validateContract(Contract contract, Validator... validators){
-
+    private boolean validateContract(Contract contract){
         boolean result = true;
         for(Validator validator : validators){
             Validator validateResult = validator.validate(contract);
-            if(validateResult.getErrorStatus() != ERROR){
-                System.out.println(validateResult.getMessage());
+            if(validateResult.getErrorStatus() == ERROR){
+                logger.error(validateResult.getMessage());
                 result = false;
             }
         }
@@ -85,8 +87,7 @@ public class Data {
     private void makeContract(String id,
                                   Calendar start, Calendar finish,
                                   String type, String addInfo,
-                                  User user, Repository repository,
-                                  Validator ... validators){
+                                  User user, Repository repository){
 
         InternetContractFactory internetFactory = new InternetContractFactory();
         PhoneContractFactory phoneFactory = new PhoneContractFactory();
@@ -101,7 +102,7 @@ public class Data {
                 contract = internetFactory.createContract(Integer.parseInt(id),
                         start, finish, user, Integer.parseInt(speed[1]));
 
-                if(validateContract(contract, validators) == true){
+                if(validateContract(contract) == true){
                     repository.addContract(contract);
                 }
 
@@ -114,7 +115,7 @@ public class Data {
                         start, finish, user,
                         Integer.parseInt(mb[1]), Integer.parseInt(sms[1]));
 
-                if(validateContract(contract, validators) == true){
+                if(validateContract(contract) == true){
                     repository.addContract(contract);
                 }
 
@@ -138,7 +139,7 @@ public class Data {
 
                 contract = tvFactory.createContract(Integer.parseInt(id), start, finish, user, canalPackage);
 
-                if(validateContract(contract, validators) == true){
+                if(validateContract(contract) == true){
                     repository.addContract(contract);
                 }
         }
@@ -164,11 +165,11 @@ public class Data {
 
         if(doesUserExist == false){
             if (countUsers == users.length) {
-                User[] users_new = new User[countUsers * 2];
+                User[] usersNew = new User[countUsers * 2];
                 for (int i = 0; i < countUsers; i++) {
-                    users_new[i] = users[i];
+                    usersNew[i] = users[i];
                 }
-                users = users_new;
+                users = usersNew;
             }
             users[countUsers++] = user;
         }
