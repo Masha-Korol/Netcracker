@@ -8,8 +8,8 @@ package exception;
  * InstantiationException and IllegalAccessException in case some problems with creating an instance of a class appeared
  */
 public class InjectorException extends Exception {
-    public InjectorException(Exception e) {
-        super(e);
+    public InjectorException(Throwable cause) {
+        super(cause);
     }
 
     public InjectorException(String message) {
