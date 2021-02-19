@@ -1,5 +1,10 @@
 package annotation;
 
+import data.Data;
+import exception.InjectorException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.File;
 import java.io.IOException;
 import java.lang.annotation.Annotation;
@@ -21,38 +26,44 @@ public class Injector {
      * It injects in property entity of class, which type is suitable for property type.
      * @param o - entity in whose properties we check for annotation
      * @return - entity with injected property (if there wasn't any exceptions)
-     * @throws Exception - in case property is not list and there's more than one or none suitable classes were found
+     * @throws InjectorException - in case property is not list and there's more than one or none suitable classes were found
+     * or there're some errors connected with file or class searching or reading
      */
-    public static <T> T inject(T o) throws Exception {
+    public static <T> T inject(T o) throws InjectorException {
 
         Configuration annotation = Injector.class.getAnnotation(Configuration.class);
         String[] packageName = Injector.class.getAnnotation(Configuration.class).packages();
 
         Field[] fields = o.getClass().getDeclaredFields();
         for (Field field : fields) {
-            if (field.isAnnotationPresent(Inject.class)) {
 
-                //if(field.getAnnotation(Inject.class).clazz() != void.class){
-                if (field.getGenericType().getTypeName().startsWith("java.util.List<")) {
+            try {
+                if (field.isAnnotationPresent(Inject.class)) {
 
-                    Type genericType = field.getGenericType();
-                    List<Class> classes = getClasses(packageName, field.getAnnotation(Inject.class).clazz());
-                    field.setAccessible(true);
-                    List<Object> objectList = new ArrayList<Object>();
-                    for(Class currentClass : classes){
-                        objectList.add(currentClass.newInstance());
+                    //if(field.getAnnotation(Inject.class).clazz() != void.class){
+                    if (field.getGenericType().getTypeName().startsWith("java.util.List<")) {
+
+                        //Type genericType = field.getGenericType();
+                        List<Class> classes = getClasses(packageName, field.getAnnotation(Inject.class).clazz());
+                        field.setAccessible(true);
+                        List<Object> objectList = new ArrayList<Object>();
+                        for(Class currentClass : classes){
+                            objectList.add(currentClass.newInstance());
+                        }
+                        field.set(o, objectList);
+                    } else {
+                        List<Class> classes = getClasses(packageName, field.getType());
+                        if (classes.size() > 1) {
+                            throw new InjectorException("Больше одного класса найдено");
+                        } else if (classes.size() == 0) {
+                            throw new InjectorException("Ни одного класса не найдено");
+                        }
+                        field.setAccessible(true);
+                        field.set(o, classes.get(0).newInstance());
                     }
-                    field.set(o, objectList);
-                } else {
-                    List<Class> classes = getClasses(packageName, field.getType());
-                    if (classes.size() > 1) {
-                        throw new Exception("Больше одного класса найдено");
-                    } else if (classes.size() == 0) {
-                        throw new Exception("Ни одного класса не найдено");
-                    }
-                    field.setAccessible(true);
-                    field.set(o, classes.get(0).newInstance());
                 }
+            } catch (ClassNotFoundException | IOException | InstantiationException | IllegalAccessException e) {
+                throw new InjectorException(e);
             }
         }
         return o;
