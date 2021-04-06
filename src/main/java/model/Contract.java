@@ -1,13 +1,18 @@
 package model;
 
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlType;
 import java.util.Calendar;
 
+@XmlType(propOrder = {"id","start","finish", "user"})
 public abstract class Contract {
 
     private Integer id;
     private Calendar start;
     private Calendar finish;
     private User user;
+
+    public Contract() {}
 
     public Integer getId() {
         return id;
@@ -35,6 +40,16 @@ public abstract class Contract {
 
     public User getUser() {
         return user;
+    }
+
+    @Override
+    public String toString() {
+        return "Contract{" +
+                "id=" + id +
+                ", start=" + start +
+                ", finish=" + finish +
+                ", user=" + user +
+                '}';
     }
 
     public void setUser(User user) {

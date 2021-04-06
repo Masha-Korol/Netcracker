@@ -1,13 +1,17 @@
 package model;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Calendar;
 
 /**
  * represents an internet contract
  */
+@XmlRootElement(name = "internet_contract")
 public class InternetContract extends Contract {
 
     private int maxInternetSpeedMb;
+
+    public InternetContract() {}
 
     public InternetContract(Integer id,
                             Calendar start,
@@ -38,5 +42,12 @@ public class InternetContract extends Contract {
 
     public void setMaxInternetSpeedMb(int maxInternetSpeedMb) {
         this.maxInternetSpeedMb = maxInternetSpeedMb;
+    }
+
+    @Override
+    public String toString() {
+        return "InternetContract{" +
+                "maxInternetSpeedMb=" + maxInternetSpeedMb +
+                '}';
     }
 }

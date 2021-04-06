@@ -102,7 +102,7 @@ public class Data {
                 contract = internetFactory.createContract(Integer.parseInt(id),
                         start, finish, user, Integer.parseInt(speed[1]));
 
-                if(validateContract(contract) == true){
+                if(validateContract(contract)){
                     repository.addContract(contract);
                 }
 
@@ -115,7 +115,7 @@ public class Data {
                         start, finish, user,
                         Integer.parseInt(mb[1]), Integer.parseInt(sms[1]));
 
-                if(validateContract(contract) == true){
+                if(validateContract(contract)){
                     repository.addContract(contract);
                 }
 
@@ -139,7 +139,7 @@ public class Data {
 
                 contract = tvFactory.createContract(Integer.parseInt(id), start, finish, user, canalPackage);
 
-                if(validateContract(contract) == true){
+                if(validateContract(contract)){
                     repository.addContract(contract);
                 }
         }
@@ -163,7 +163,7 @@ public class Data {
             }
         }
 
-        if(doesUserExist == false){
+        if(!doesUserExist){
             if (countUsers == users.length) {
                 User[] usersNew = new User[countUsers * 2];
                 for (int i = 0; i < countUsers; i++) {

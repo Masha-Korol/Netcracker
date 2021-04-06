@@ -2,12 +2,16 @@ package model;
 
 import model.enums.Sex;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import java.util.Calendar;
 import java.util.Objects;
 
 /**
  * represents user
  */
+@XmlRootElement(name = "user")
+@XmlType(propOrder = {"id","lastName","birth", "sex", "passportNumber", "passportSeries", "age"})
 public class User {
     private int id;
     private String lastName;
@@ -16,6 +20,8 @@ public class User {
     private long passportNumber;
     private long passportSeries;
     private int age;
+
+    public User() {}
 
     /**
      * checks user data
@@ -139,7 +145,11 @@ public class User {
         return passportSeries;
     }
 
-    public void setPassportSeries(Long passportSeries) {
+    public void setPassportSeries(long passportSeries) {
         this.passportSeries = passportSeries;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }

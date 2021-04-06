@@ -1,12 +1,14 @@
 package data;
 
 import annotation.Injector;
+import model.Contract;
 import org.junit.jupiter.api.Test;
 import repo.Repository;
 import validator.DateValidator;
 import validator.UserValidator;
 
 import java.io.FileReader;
+import java.lang.reflect.Method;
 
 class DataTest {
 
@@ -19,6 +21,5 @@ class DataTest {
         DateValidator dateValidator = new DateValidator();
         UserValidator userValidator = new UserValidator();
         data.readFile(repository, file);
-        repository.getAllContracts();
     }
 }
