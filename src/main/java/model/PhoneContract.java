@@ -1,14 +1,20 @@
 package model;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import java.util.Calendar;
 
 /**
  * represents a phone contract
  */
+@XmlRootElement(name = "phone_contract")
+@XmlType(propOrder = {"mbInternet","sms"})
 public class PhoneContract extends Contract {
 
     private int mbInternet;
     private int sms;
+
+    public PhoneContract() {}
 
     public PhoneContract(Integer id,
                          Calendar start,
@@ -49,5 +55,13 @@ public class PhoneContract extends Contract {
 
     public void setSms(int sms) {
         this.sms = sms;
+    }
+
+    @Override
+    public String toString() {
+        return "PhoneContract{" +
+                "mbInternet=" + mbInternet +
+                ", sms=" + sms +
+                '}';
     }
 }

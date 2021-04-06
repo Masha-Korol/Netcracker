@@ -1,41 +1,61 @@
 package repo;
 
 import annotation.Inject;
+import db.DataParser;
 import model.*;
 import sorter.BubbleSorter;
 import sorter.ISorter;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import java.util.Comparator;
 import java.util.function.Predicate;
 
 /**
  * contains contracts and methods for its management
  */
+@XmlRootElement(name = "repository")
+@XmlType(propOrder = {"contracts"})
 public class Repository {
     final int DEFAULT_CAPACITY = 16;
     private int count;
     @Inject
     private ISorter sorter;
-    Contract[] contracts = new Contract[DEFAULT_CAPACITY];
+    private Contract[] contracts = new Contract[DEFAULT_CAPACITY];
+    private DataParser dataParser;
+
+    /*public Repository(DataParser dataParser) {
+        this.dataParser = dataParser;
+    }*/
+
+    /*public void saveExistingContractsToDb(){
+        dataParser.addContracts(this.contracts);
+    }*/
+
+    public void setContracts(Contract[] contracts) {
+        this.contracts = contracts;
+    }
 
     /**
      * sorts array of contracts, using injected type of sort
+     *
      * @param comparator
      */
-    public void sort(Comparator<Contract> comparator){
+    public void sort(Comparator<Contract> comparator) {
         sorter.sort(contracts, comparator);
     }
 
     /**
      * gets all contracts by criteria
+     *
      * @param predicate
      * @return array of contracts
      */
-    public Repository getContracts(Predicate<Contract> predicate){
+    public Repository getContracts(Predicate<Contract> predicate) {
         Repository repository = new Repository();
 
-        for (int i = 0; i < count; i++){
-            if (predicate.test(contracts[i])){
+        for (int i = 0; i < count; i++) {
+            if (predicate.test(contracts[i])) {
                 repository.addContract(contracts[i]);
             }
         }
@@ -44,20 +64,22 @@ public class Repository {
 
     /**
      * gets all contracts
-     * @return
+     *
+     * @return array of contracts
      */
-    public Contract[] getAllContracts(){
-        return contracts;
+    public Contract[] getAllContracts() {
+        return this.contracts;
     }
 
     /**
      * returns internet contract by id (first found)
+     *
      * @param id
      * @return Contract
      */
-    public Contract getContract(int id){
-        for(int i = 0; i < count; i++){
-            if (contracts[i].getId() == id){
+    public Contract getContract(int id) {
+        for (int i = 0; i < count; i++) {
+            if (contracts[i].getId() == id) {
                 return contracts[i];
             }
         }
@@ -66,6 +88,7 @@ public class Repository {
 
     /**
      * adds new contract
+     *
      * @param contract
      */
     public void addContract(Contract contract) {
@@ -78,13 +101,14 @@ public class Repository {
 
     /**
      * adds array of contracts
+     *
      * @param array
      */
-    public void addContracts(Contract[] array){
-        while (count + array.length > contracts.length){
+    public void addContracts(Contract[] array) {
+        while (count + array.length > contracts.length) {
             enlarge();
         }
-        for (int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             contracts[count++] = array[i];
         }
     }
@@ -92,9 +116,9 @@ public class Repository {
     /**
      * makes array twice bigger
      */
-    private void enlarge(){
+    private void enlarge() {
         Contract[] arrayNew = new Contract[count * 2];
-        for (int i = 0; i < count; i++){
+        for (int i = 0; i < count; i++) {
             arrayNew[i] = contracts[i];
         }
         contracts = arrayNew;
@@ -103,11 +127,11 @@ public class Repository {
     /**
      * puts all null entities in the end of array
      */
-    private void trimArray(){
+    private void trimArray() {
         Contract[] contractsNew = new Contract[contracts.length];
         int size = 0;
-        for (int i = 0; i < contracts.length - 1; i++){
-            if (contracts[i] != null){
+        for (int i = 0; i < contracts.length - 1; i++) {
+            if (contracts[i] != null) {
                 contractsNew[size++] = contracts[i];
             }
         }
@@ -116,12 +140,13 @@ public class Repository {
 
     /**
      * deletes contract by id
+     *
      * @param id
      * @return
      */
-    public boolean deleteContract(int id){
-        for (int i = 0; i < count; i--){
-            if(contracts[i].getId() == id){
+    public boolean deleteContract(int id) {
+        for (int i = 0; i < count; i--) {
+            if (contracts[i].getId() == id) {
                 contracts[i] = null;
                 trimArray();
                 count--;
@@ -133,17 +158,22 @@ public class Repository {
 
     /**
      * replaces contract, found by id, with new one
-     * @param id id of contract to replace
+     *
+     * @param id       id of contract to replace
      * @param contract contract with which replace
      * @return boolean - replaced or not found
      */
-    public boolean replaceContract(int id, Contract contract){
-        for (int i=0;i<count;i++){
-            if(contracts[i].getId()==id){
-                contracts[i]=contract;
+    public boolean replaceContract(int id, Contract contract) {
+        for (int i = 0; i < count; i++) {
+            if (contracts[i].getId() == id) {
+                contracts[i] = contract;
                 return true;
             }
         }
         return false;
+    }
+
+    public Contract[] getContracts() {
+        return contracts;
     }
 }
